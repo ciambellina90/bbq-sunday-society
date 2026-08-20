@@ -351,13 +351,245 @@ a {
   color: #aaa097;
 }
 
+/* ========================================
+   SECTION TYPOGRAPHY
+   ======================================== */
 
+.section-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-weight: 900;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.section-copy {
+  max-width: 650px;
+}
+
+.section-copy p {
+  margin-bottom: 22px;
+  font-size: 1.08rem;
+}
+
+.section-highlight {
+  font-weight: 700;
+  font-size: 1.2rem !important;
+}
+
+
+/* ========================================
+   MANIFESTO
+   ======================================== */
+
+.manifesto {
+  background: var(--dark);
+  color: var(--cream);
+
+  padding: 110px 0;
+}
+
+.eyebrow-light {
+  border-color: var(--cream);
+}
+
+.manifesto-title {
+  font-family: "Barlow Condensed", sans-serif;
+
+  font-size: clamp(4rem, 8vw, 7.5rem);
+
+  font-weight: 900;
+  line-height: 0.88;
+
+  text-transform: uppercase;
+
+  margin: 28px 0 55px;
+}
+
+.manifesto-list {
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.manifesto-list p {
+  margin: 0;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.manifesto-list strong {
+  color: var(--ember);
+}
+
+.manifesto-claim {
+  margin-top: 55px;
+
+  font-family: "Barlow Condensed", sans-serif;
+
+  font-size: clamp(2rem, 4vw, 3.8rem);
+
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   COURSES
+   ======================================== */
+
+.courses-header {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+
+  gap: 70px;
+
+  align-items: end;
+
+  margin-bottom: 55px;
+}
+
+.courses-header > p {
+  max-width: 500px;
+
+  color: var(--muted);
+
+  font-size: 1.05rem;
+}
+
+
+/* ---------- COURSE CARD ---------- */
+
+.course-card {
+  display: grid;
+
+  grid-template-columns: 180px 1fr;
+
+  gap: 50px;
+
+  padding: 55px 0;
+
+  border-top: 2px solid var(--charcoal);
+}
+
+.course-card:last-child {
+  border-bottom: 2px solid var(--charcoal);
+}
+
+.course-number {
+  font-family: "Barlow Condensed", sans-serif;
+
+  color: var(--ember);
+
+  font-size: clamp(5rem, 9vw, 8rem);
+
+  font-weight: 900;
+
+  line-height: 0.8;
+}
+
+.course-content {
+  max-width: 760px;
+}
+
+.course-meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+}
+
+.course-meta span {
+  padding: 6px 10px;
+
+  border: 1px solid var(--charcoal);
+  border-radius: 100px;
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+.course-content h3 {
+  font-family: "Barlow Condensed", sans-serif;
+
+  font-size: clamp(3rem, 6vw, 5.5rem);
+
+  font-weight: 900;
+  line-height: 0.9;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.course-tagline {
+  color: var(--ember);
+
+  font-weight: 800;
+
+  font-size: 1.25rem;
+
+  margin-bottom: 15px;
+}
+
+.course-content > p:not(.course-tagline) {
+  max-width: 600px;
+
+  color: var(--muted);
+
+  margin-bottom: 25px;
+}
+
+.course-link {
+  font-weight: 800;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  font-size: 0.85rem;
+
+  letter-spacing: 0.04em;
+}
+
+.course-link:hover {
+  color: var(--ember);
+}
 /* ========================================
    RESPONSIVE
    ======================================== */
 
 @media (max-width: 900px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 
+  .courses-header {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .course-card {
+    grid-template-columns: 120px 1fr;
+    gap: 30px;
+  }
   .menu {
     display: none;
   }
@@ -381,7 +613,22 @@ a {
 
 
 @media (max-width: 600px) {
+  .course-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
+  .course-number {
+    font-size: 4.5rem;
+  }
+
+  .manifesto {
+    padding: 75px 0;
+  }
+
+  .manifesto-list p {
+    padding: 17px 0;
+  }
   .container {
     width: min(100% - 28px, var(--max-width));
   }
