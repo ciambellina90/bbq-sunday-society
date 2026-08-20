@@ -1,0 +1,430 @@
+/* ========================================
+   THE BBQ SUNDAY SOCIETY
+   ======================================== */
+
+
+/* ---------- RESET ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2eadb;
+  color: #211d19;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+
+/* ---------- VARIABLES ---------- */
+
+:root {
+
+  --paper: #f2eadb;
+  --cream: #fffaf0;
+
+  --charcoal: #211d19;
+  --dark: #29241f;
+
+  --ember: #bd4d31;
+
+  --muted: #746b62;
+
+  --max-width: 1180px;
+}
+
+
+/* ---------- GLOBAL ---------- */
+
+.container {
+  width: min(100% - 40px, var(--max-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section h2 {
+  font-size: 3rem;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  background: var(--paper);
+}
+
+.nav {
+  min-height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.logo {
+  font-size: 0.9rem;
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  color: var(--ember);
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.button {
+  display: inline-block;
+
+  background: var(--ember);
+  color: white;
+
+  padding: 15px 24px;
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  border: 2px solid var(--ember);
+
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  background: transparent;
+  color: var(--ember);
+}
+
+.button-small {
+  padding: 11px 17px;
+  font-size: 0.78rem;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+  padding: 80px 0 120px;
+}
+
+.hero-grid {
+
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+
+  gap: 70px;
+
+  align-items: end;
+}
+
+
+.eyebrow {
+
+  display: inline-block;
+
+  padding: 7px 12px;
+
+  border: 1px solid var(--charcoal);
+  border-radius: 100px;
+
+  margin-bottom: 28px;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+
+.hero h1 {
+
+  max-width: 850px;
+
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+  font-size: clamp(4rem, 8.5vw, 8rem);
+
+  font-weight: 900;
+  line-height: 0.88;
+
+  text-transform: uppercase;
+
+  margin-bottom: 32px;
+}
+
+.hero h1 span {
+  color: var(--ember);
+}
+
+
+.hero-intro {
+
+  max-width: 600px;
+
+  font-size: 1.35rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  margin-bottom: 16px;
+}
+
+
+.hero-text {
+
+  max-width: 600px;
+
+  color: var(--muted);
+
+  font-size: 1.05rem;
+
+  margin-bottom: 30px;
+}
+
+
+.hero-actions {
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  flex-wrap: wrap;
+}
+
+
+.text-link {
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.text-link:hover {
+  color: var(--ember);
+}
+
+
+/* ---------- HERO CARD ---------- */
+
+.hero-card {
+
+  background: var(--dark);
+  color: var(--cream);
+
+  padding: 38px;
+
+  border-radius: 25px;
+}
+
+
+.hero-card-label {
+
+  display: block;
+
+  color: #c8beb3;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  margin-bottom: 25px;
+}
+
+
+.hero-card p {
+
+  font-size: 1.15rem;
+
+  margin-bottom: 20px;
+}
+
+
+.hero-card strong {
+
+  display: block;
+
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+  font-size: 2.4rem;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+
+/* ---------- STATEMENT ---------- */
+
+.statement {
+
+  background: var(--dark);
+
+  color: var(--cream);
+
+  padding: 100px 0;
+}
+
+
+.statement p {
+
+  font-size: 1.3rem;
+
+  margin-bottom: 15px;
+}
+
+
+.statement h2 {
+
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+  font-size: clamp(3rem, 7vw, 6.5rem);
+
+  line-height: 0.95;
+
+  text-transform: uppercase;
+}
+
+
+.statement h2::first-line {
+  color: var(--cream);
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+
+  padding: 60px 0;
+
+  background: var(--dark);
+
+  color: var(--cream);
+}
+
+.site-footer strong {
+
+  display: block;
+
+  margin-bottom: 5px;
+}
+
+.site-footer p {
+
+  color: #aaa097;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 900px) {
+
+  .menu {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 50px;
+  }
+
+  .hero-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .hero-card {
+    max-width: 600px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .container {
+    width: min(100% - 28px, var(--max-width));
+  }
+
+  .nav {
+    min-height: 80px;
+  }
+
+  .nav .button {
+    display: none;
+  }
+
+  .hero {
+    padding: 45px 0 70px;
+  }
+
+  .hero h1 {
+
+    font-size: clamp(3.4rem, 17vw, 5rem);
+  }
+
+  .hero-intro {
+    font-size: 1.15rem;
+  }
+
+  .hero-card {
+
+    padding: 28px;
+  }
+
+  .hero-card strong {
+
+    font-size: 2rem;
+  }
+
+  .statement {
+
+    padding: 70px 0;
+  }
+
+  .section {
+
+    padding: 70px 0;
+  }
+
+}
