@@ -548,31 +548,162 @@
 
     <!-- CTA FINALE -->
 <section id="contatti" class="section contact">
-  <div class="container section-grid">
 
-    <div>
-      <span class="eyebrow">Contatti</span>
+  <div class="container contact-grid">
+
+    <!-- TESTO -->
+    <div class="contact-intro">
+
+      <span class="eyebrow">
+        Join the Society
+      </span>
 
       <h2 class="section-title">
-        Vuoi partecipare?
+        Ci vediamo<br>
+        davanti al fuoco?
       </h2>
-    </div>
 
-    <div class="section-copy">
-      <p>
-        Scrivici per sapere quando parte il prossimo corso
-        o per ricevere maggiori informazioni.
+      <p class="contact-lead">
+        Vuoi partecipare a uno dei nostri corsi,
+        sapere quando sarà la prossima data
+        o semplicemente farci una domanda?
       </p>
 
-      <a
-        class="button"
-        href="mailto:info@bbqsundaysociety.it"
+      <p>
+        Scrivici. Ti risponderemo noi,
+        non un chatbot e nemmeno un reparto commerciale.
+      </p>
+
+      <div class="contact-email">
+        <span>Preferisci la vecchia scuola?</span>
+
+        <a href="mailto:info@bbqsundaysociety.it">
+          info@bbqsundaysociety.it
+        </a>
+      </div>
+
+    </div>
+
+
+    <!-- FORM -->
+    <div class="contact-form-wrapper">
+
+      <form
+        id="contact-form"
+        class="contact-form"
       >
-        Scrivici
-      </a>
+
+        <div class="form-field">
+          <label for="nome">
+            Come ti chiami?
+          </label>
+
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Il tuo nome"
+            required
+          >
+        </div>
+
+
+        <div class="form-field">
+          <label for="email">
+            La tua email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="nome@email.it"
+            required
+          >
+        </div>
+
+
+        <div class="form-field">
+          <label for="corso">
+            Quale corso ti interessa?
+          </label>
+
+          <select
+            id="corso"
+            name="corso"
+          >
+            <option value="">
+              Scegli un corso
+            </option>
+
+            <option value="dalla-griglia-al-barbecue">
+              01 — Dalla Griglia al Barbecue
+            </option>
+
+            <option value="barbecue-weekend">
+              02 — Il Barbecue del Weekend
+            </option>
+
+            <option value="carne-perfetta">
+              03 — Carne Perfetta al Barbecue
+            </option>
+
+            <option value="informazioni">
+              Voglio solo qualche informazione
+            </option>
+          </select>
+        </div>
+
+
+        <div class="form-field">
+          <label for="messaggio">
+            Dicci qualcosa
+          </label>
+
+          <textarea
+            id="messaggio"
+            name="messaggio"
+            rows="5"
+            placeholder="Scrivi qui..."
+          ></textarea>
+        </div>
+
+
+        <div class="form-check">
+
+          <input
+            type="checkbox"
+            id="privacy"
+            name="privacy"
+            required
+          >
+
+          <label for="privacy">
+            Ho letto l'informativa privacy e acconsento
+            al trattamento dei dati per essere ricontattato.
+          </label>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="button form-submit"
+        >
+          Invia richiesta →
+        </button>
+
+        <p class="form-note">
+          Niente spam. Niente newsletter non richieste.
+          Solo barbecue.
+        </p>
+
+      </form>
+
     </div>
 
   </div>
+
 </section>
     <section class="final-cta">
   <div class="container">
