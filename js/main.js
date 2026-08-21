@@ -55,40 +55,35 @@ if (form) {
    ======================================== */
 
 const menuToggle = document.querySelector(".menu-toggle");
-const mainMenu = document.querySelector(".site-header .menu");
+const mainMenu = document.querySelector("#main-menu");
 
 if (menuToggle && mainMenu) {
 
-  menuToggle.addEventListener("click", function () {
+  menuToggle.addEventListener("click", () => {
 
-    const isOpen = mainMenu.classList.toggle("menu-open");
+    const isOpen = mainMenu.classList.toggle("is-open");
 
-    menuToggle.classList.toggle("active", isOpen);
+    menuToggle.classList.toggle("is-open", isOpen);
 
     menuToggle.setAttribute(
       "aria-expanded",
-      isOpen ? "true" : "false"
-    );
-
-    menuToggle.setAttribute(
-      "aria-label",
-      isOpen ? "Chiudi menu" : "Apri menu"
+      String(isOpen)
     );
 
   });
 
 
-  /* Chiudi il menu quando clicco su una voce */
+  mainMenu.querySelectorAll("a").forEach((link) => {
 
-  mainMenu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", () => {
 
-    link.addEventListener("click", function () {
+      mainMenu.classList.remove("is-open");
+      menuToggle.classList.remove("is-open");
 
-      mainMenu.classList.remove("menu-open");
-      menuToggle.classList.remove("active");
-
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Apri menu");
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
 
     });
 
