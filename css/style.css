@@ -1421,6 +1421,9 @@ a {
   overflow: hidden;
 }
 .form-privacy {
+  grid-column: 1 / -1;
+
+  width: 100%;
   margin-top: 15px;
 
   color: var(--muted);
@@ -1431,8 +1434,8 @@ a {
 
 .form-privacy a {
   color: var(--ember);
-
   font-weight: 700;
+}
 }
 /* ========================================
    SUNDAY SESSIONS
