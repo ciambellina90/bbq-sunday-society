@@ -1,4 +1,17 @@
-export async function onRequestPost(context) {
+export function onRequestGet() {
+  return new Response(
+    JSON.stringify({
+      status: "ok",
+      message: "Contact API is running"
+    }),
+    {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }
+  );
+}export async function onRequestPost(context) {
   try {
     const formData = await context.request.formData();
 
