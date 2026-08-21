@@ -1408,6 +1408,13 @@ a {
 
   font-size: 0.75rem;
 }
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 /* ========================================
    RESPONSIVE EXTRA
    ======================================== */
