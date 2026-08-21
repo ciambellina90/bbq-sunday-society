@@ -2121,7 +2121,81 @@ a {
 .meat-test-featured p {
   color: #c8beb3;
 }
+/* ========================================
+   LEGAL PAGES
+   ======================================== */
 
+.legal-page {
+  background: var(--cream);
+}
+
+.legal-page .section-title {
+  margin-top: 20px;
+}
+
+.legal-updated {
+  margin-top: 20px;
+
+  color: var(--muted);
+
+  font-size: 0.85rem;
+}
+
+.legal-content {
+  max-width: 850px;
+
+  margin-top: 70px;
+}
+
+.legal-content h2 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+
+  padding-top: 20px;
+
+  border-top: 2px solid var(--charcoal);
+
+  font-family: "Barlow Condensed", sans-serif;
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.legal-content p {
+  margin-bottom: 16px;
+
+  color: var(--muted);
+
+  line-height: 1.7;
+}
+
+.legal-content ul {
+  margin: 15px 0 25px 20px;
+
+  color: var(--muted);
+}
+
+.legal-content li {
+  margin-bottom: 8px;
+}
+
+.legal-content a {
+  color: var(--ember);
+
+  font-weight: 700;
+}
+
+.footer-legal {
+  margin-top: 15px;
+
+  font-size: 0.8rem;
+}
+
+.footer-legal a {
+  color: inherit;
+}
 
 /* ========================================
    MEAT ERRORS
