@@ -1982,6 +1982,7 @@ a {
  .meat-lab-grid {
     grid-template-columns: 1fr;
   }
+
 }
 
 @media (max-width: 600px) {
@@ -2270,43 +2271,186 @@ a {
 }
 
 /* ========================================
-   MOBILE MENU
+   MOBILE NAVIGATION
    ======================================== */
-
-/* Hamburger nascosto su desktop */
 
 .menu-toggle {
   display: none;
+}
 
-  width: 42px;
-  height: 42px;
-
-  padding: 8px;
-
-  border: 0;
-  background: transparent;
-
-  cursor: pointer;
+.menu-mobile-cta {
+  display: none;
 }
 
 
-/* Le tre linee */
+/* DESKTOP */
 
-.menu-toggle span {
-  display: block;
+@media (min-width: 801px) {
 
-  width: 100%;
-  height: 3px;
+  .site-header .menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
 
-  margin: 5px 0;
-
-  background: var(--charcoal);
-
-  transition:
-    transform 0.25s ease,
-    opacity 0.25s ease;
 }
 
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .site-header .nav {
+    position: relative;
+
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+  }
+
+
+  /* LOGO */
+
+  .site-header .logo {
+    position: relative;
+    z-index: 1002;
+  }
+
+
+  /* HAMBURGER */
+
+  .menu-toggle {
+    display: flex;
+
+    width: 44px;
+    height: 44px;
+
+    margin-left: auto;
+    padding: 9px;
+
+    flex-direction: column;
+    justify-content: center;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 1002;
+  }
+
+
+  .menu-toggle span {
+    display: block;
+
+    width: 100%;
+    height: 3px;
+
+    margin: 3px 0;
+
+    background: var(--charcoal);
+
+    transition: 0.25s ease;
+  }
+
+
+  /* NASCONDI CTA DESKTOP */
+
+  .desktop-cta {
+    display: none !important;
+  }
+
+
+  /* MENU MOBILE CHIUSO */
+
+  .site-header .menu {
+    position: absolute;
+
+    top: 100%;
+    left: -20px;
+    right: -20px;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 10px 25px 25px;
+
+    background: var(--cream);
+
+    border-top: 1px solid rgba(33, 29, 25, 0.12);
+    border-bottom: 4px solid var(--ember);
+
+    z-index: 1001;
+  }
+
+
+  /* MENU MOBILE APERTO */
+
+  .site-header .menu.is-open {
+    display: flex;
+  }
+
+
+  /* LINK */
+
+  .site-header .menu a {
+    display: block;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid rgba(33, 29, 25, 0.12);
+
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: 1.45rem;
+    font-weight: 800;
+
+    line-height: 1;
+
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+
+  .site-header .menu a:last-child {
+    border-bottom: 0;
+  }
+
+
+  /* CTA MOBILE */
+
+  .site-header .menu .menu-mobile-cta {
+    display: block;
+
+    padding-top: 20px;
+
+    color: var(--ember);
+
+    border-bottom: 0;
+  }
+
+
+  /* HAMBURGER -> X */
+
+  .menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+}
 
 /* ========================================
    MOBILE
