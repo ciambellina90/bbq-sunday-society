@@ -1995,6 +1995,15 @@ a {
    ======================================== */
 @media (max-width: 700px) {
 
+   .team-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .team-photo {
+    width: 170px;
+    height: 170px;
+  }
   .dates-grid {
     grid-template-columns: 1fr;
   }
@@ -2516,6 +2525,7 @@ a {
     justify-content: space-between;
   }
 
+   
 
   /* Mostriamo hamburger */
 
@@ -2633,6 +2643,8 @@ a {
 
   border-radius: 50%;
   overflow: hidden;
+   border: 3px solid var(--charcoal);
+  box-shadow: 7px 7px 0 var(--ember)
 }
 
 .team-photo img {
