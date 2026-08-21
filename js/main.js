@@ -49,3 +49,49 @@ if (form) {
     }
   });
 }
+
+/* ========================================
+   MOBILE MENU
+   ======================================== */
+
+const menuToggle = document.querySelector(".menu-toggle");
+const mainMenu = document.querySelector(".site-header .menu");
+
+if (menuToggle && mainMenu) {
+
+  menuToggle.addEventListener("click", function () {
+
+    const isOpen = mainMenu.classList.toggle("menu-open");
+
+    menuToggle.classList.toggle("active", isOpen);
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Chiudi menu" : "Apri menu"
+    );
+
+  });
+
+
+  /* Chiudi il menu quando clicco su una voce */
+
+  mainMenu.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+      mainMenu.classList.remove("menu-open");
+      menuToggle.classList.remove("active");
+
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Apri menu");
+
+    });
+
+  });
+
+}
