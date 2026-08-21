@@ -90,15 +90,6 @@ a {
   gap: 30px;
 }
 
-.logo {
-  font-size: 0.9rem;
-  line-height: 1.05;
-  font-weight: 900;
-  letter-spacing: 0.07em;
-
-  text-decoration: none;
-}
-
 .menu {
   display: flex;
   gap: 30px;
@@ -1516,9 +1507,10 @@ a {
   margin-bottom: 40px;
 }
 @media (max-width: 768px) {
-
     .brand-logo {
-        height: 62px;
+        height: 48px;
+        max-width: 130px;
     }
+}
 
 }
