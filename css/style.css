@@ -1455,7 +1455,9 @@ a {
    .takeaway-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
+ .meat-lab-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1521,7 +1523,10 @@ a {
     grid-template-columns: 1fr;
     gap: 10px;
   }
-
+ .error-item {
+    grid-template-columns: 60px 1fr;
+    gap: 15px;
+  }
    @media (max-width: 768px) {
     .brand-logo {
         height: 48px;
