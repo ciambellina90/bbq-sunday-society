@@ -66,20 +66,23 @@ a {
 .site-header {
   background: var(--paper);
 }
+
 .brand {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
-.brand-logo {
-    display: block;
-    width: auto;
-    height: 70px;
-    max-width: 180px;
-    object-fit: contain;
+.brand-logo,
+.brand img {
+  display: block;
+  width: auto;
+  height: 70px;
+  max-width: 180px;
+  object-fit: contain;
 }
+
 .nav {
   min-height: 100px;
 
@@ -89,7 +92,6 @@ a {
 
   gap: 30px;
 }
-
 .menu {
   display: flex;
   gap: 30px;
