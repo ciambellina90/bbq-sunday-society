@@ -1413,7 +1413,14 @@ a {
 
 }
 @media (max-width: 900px) {
+.contact-grid {
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
 
+.contact-intro {
+  position: static;
+}
   .no-bullshit-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -1438,7 +1445,9 @@ a {
 }
 
 @media (max-width: 600px) {
-
+.contact-form-wrapper {
+  padding: 28px 20px;
+}
   .steps-grid {
     grid-template-columns: 1fr;
   }
