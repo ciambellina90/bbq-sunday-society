@@ -1415,7 +1415,20 @@ a {
   height: 1px;
   overflow: hidden;
 }
+.form-privacy {
+  margin-top: 15px;
 
+  color: var(--muted);
+
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.form-privacy a {
+  color: var(--ember);
+
+  font-weight: 700;
+}
 /* ========================================
    SUNDAY SESSIONS
    ======================================== */
