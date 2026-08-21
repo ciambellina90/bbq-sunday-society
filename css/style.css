@@ -78,7 +78,7 @@ a {
 .brand img {
   display: block;
   width: auto;
-  height: 70px;
+  height: 90px;
   max-width: 180px;
   object-fit: contain;
 }
