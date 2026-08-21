@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Sunday Sessions | The BBQ Sunday Society</title>
+
+  <meta
+    name="description"
+    content="Serate tematiche dedicate ai grandi classici del barbecue. Noi cuciniamo, tu vieni a mangiare, scoprire e lasciarti ispirare."
+  >
+<!-- FAVICON -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container nav">
+
+    <a href="/" class="brand" aria-label="The BBQ Sunday Society - Home">
+      <img
+        src="/images/logo.png"
+        alt="The BBQ Sunday Society Treviso"
+        class="brand-logo"
+      >
+    </a>
+
+    <nav class="menu">
+      <a href="#society">La Society</a>
+      <a href="#corsi">I corsi</a>
+      <a href="sunday-sessions.html">Sunday Sessions</a>
+      <a href="#team">Chi siamo</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+
+    <a href="#contatti" class="button button-small">
+      Partecipa
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+<section class="sessions-hero">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      The BBQ Sunday Society
+    </span>
+
+    <h1>
+      Sunday<br>
+      Sessions.
+    </h1>
+
+    <p class="sessions-hero-tagline">
+      Il barbecue si impara anche mangiandolo.
+    </p>
+
+    <p class="sessions-hero-intro">
+      Serate tematiche dedicate ai grandi classici del barbecue,
+      alle ricette che ci hanno fatto innamorare del fuoco
+      e a quelle che prima o poi dovresti provare.
+    </p>
+
+    <a href="#calendario" class="button">
+      Scopri le prossime serate ↓
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- COSA SONO -->
+<section class="section sessions-about">
+
+  <div class="container section-grid">
+
+    <div>
+
+      <span class="eyebrow">
+        Non è un corso
+      </span>
+
+      <h2 class="section-title">
+        Qui si<br>
+        mangia.
+      </h2>
+
+    </div>
+
+
+    <div class="section-copy">
+
+      <p>
+        Alle Sunday Sessions non devi portare grembiule,
+        termometro o prendere appunti.
+      </p>
+
+      <p>
+        Devi solo sederti a tavola.
+      </p>
+
+      <p>
+        Noi scegliamo un tema, accendiamo i barbecue
+        e prepariamo un menu pensato per raccontarlo.
+      </p>
+
+      <p>
+        Durante la serata ti raccontiamo cosa stai mangiando,
+        da dove arriva quella preparazione e come l'abbiamo realizzata.
+      </p>
+
+      <p class="section-highlight">
+        Il resto sono chiacchiere, curiosità
+        e barbecue da condividere.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- COME FUNZIONA -->
+<section class="section sessions-how">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      Come funziona
+    </span>
+
+    <h2 class="section-title">
+      Una sera.<br>
+      Un tema.<br>
+      Un sacco di BBQ.
+    </h2>
+
+
+    <div class="sessions-steps">
+
+      <article class="session-step">
+        <span>01</span>
+        <h3>Scegliamo un tema</h3>
+        <p>
+          Una ricetta, uno stile, un paese
+          o una tecnica che vale la pena conoscere.
+        </p>
+      </article>
+
+      <article class="session-step">
+        <span>02</span>
+        <h3>Accendiamo i BBQ</h3>
+        <p>
+          Prepariamo un menu completo
+          costruito intorno al tema della serata.
+        </p>
+      </article>
+
+      <article class="session-step">
+        <span>03</span>
+        <h3>Tu ti siedi</h3>
+        <p>
+          Assaggi, mangi, fai domande
+          e conosci altra gente.
+        </p>
+      </article>
+
+      <article class="session-step session-step-featured">
+        <span>04</span>
+        <h3>Torni a casa ispirato</h3>
+        <p>
+          Magari domenica prossima
+          provi qualcosa di nuovo sul tuo barbecue.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- POSSIBILI SESSION -->
+<section class="section sessions-themes">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      Cosa potrebbe finire in tavola?
+    </span>
+
+    <h2 class="section-title">
+      Ogni session<br>
+      ha la sua storia.
+    </h2>
+
+    <p class="sessions-themes-intro">
+      Le Sessions cambiano continuamente.
+      Questi sono alcuni dei temi che potresti trovare in calendario.
+    </p>
+
+
+    <div class="sessions-grid">
+
+      <article class="session-card">
+        <span class="session-card-number">01</span>
+        <h3>American BBQ</h3>
+        <p>Brisket · Ribs · Pulled Pork</p>
+        <strong>Low & Slow</strong>
+      </article>
+
+
+      <article class="session-card">
+        <span class="session-card-number">02</span>
+        <h3>Ribs Night</h3>
+        <p>Kansas City · Memphis · Our Way</p>
+        <strong>Get your hands dirty</strong>
+      </article>
+
+
+      <article class="session-card">
+        <span class="session-card-number">03</span>
+        <h3>Burger Society</h3>
+        <p>Smash · BBQ · Pulled Pork</p>
+        <strong>No fast food</strong>
+      </article>
+
+
+      <article class="session-card">
+        <span class="session-card-number">04</span>
+        <h3>Steak Night</h3>
+        <p>Tagli · Fuoco · Temperature</p>
+        <strong>Stop guessing</strong>
+      </article>
+
+
+      <article class="session-card">
+        <span class="session-card-number">05</span>
+        <h3>BBQ Taco Night</h3>
+        <p>Smoke · Meat · Tortillas</p>
+        <strong>BBQ meets Mexico</strong>
+      </article>
+
+
+      <article class="session-card session-card-featured">
+        <span class="session-card-number">06</span>
+        <h3>Chicken Night</h3>
+        <p>Wings · Thighs · Whole Chicken</p>
+        <strong>Basta pollo secco</strong>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY -->
+<section class="sessions-why">
+
+  <div class="container">
+
+    <span class="eyebrow eyebrow-light">
+      Why we do it
+    </span>
+
+    <p class="sessions-big-claim">
+      Prima<br>
+      lo assaggi.
+    </p>
+
+    <p class="sessions-big-claim sessions-big-claim-light">
+      Poi ti viene<br>
+      voglia di farlo.
+    </p>
+
+    <p class="sessions-why-copy">
+      È esattamente così che è iniziata anche per noi.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CALENDARIO -->
+<section id="calendario" class="section sessions-calendar">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      Calendario
+    </span>
+
+    <h2 class="section-title">
+      Prossime<br>
+      Sessions.
+    </h2>
+
+    <div class="sessions-calendar-grid">
+
+
+      <!-- EVENTO 1 -->
+      <article class="session-event">
+
+        <div class="session-event-date">
+          <span class="session-event-day">19</span>
+
+          <div>
+            <span class="session-event-month">Settembre</span>
+            <span class="session-event-year">2026</span>
+          </div>
+        </div>
+
+        <div class="session-event-content">
+
+          <div class="session-event-label">
+            Sunday Session 01
+          </div>
+
+          <h3>
+            American BBQ Night
+          </h3>
+
+          <p class="session-event-menu">
+            Brisket · Ribs · Pulled Pork · Sides
+          </p>
+
+          <div class="session-event-details">
+            <p><strong>Orario</strong> 19:30</p>
+            <p><strong>Luogo</strong> Da definire</p>
+            <p><strong>Posti</strong> Max 12 persone</p>
+          </div>
+
+        </div>
+
+        <div class="session-event-action">
+
+          <span>Quota partecipazione</span>
+
+          <strong>
+            € 45
+          </strong>
+
+          <a href="index.html#contatti" class="button">
+            Voglio esserci →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- EVENTO 2 -->
+      <article class="session-event">
+
+        <div class="session-event-date">
+          <span class="session-event-day">03</span>
+
+          <div>
+            <span class="session-event-month">Ottobre</span>
+            <span class="session-event-year">2026</span>
+          </div>
+        </div>
+
+        <div class="session-event-content">
+
+          <div class="session-event-label">
+            Sunday Session 02
+          </div>
+
+          <h3>
+            Ribs Night
+          </h3>
+
+          <p class="session-event-menu">
+            Tre stili di ribs · Sides
+          </p>
+
+          <div class="session-event-details">
+            <p><strong>Orario</strong> 19:30</p>
+            <p><strong>Luogo</strong> Da definire</p>
+            <p><strong>Posti</strong> Max 12 persone</p>
+          </div>
+
+        </div>
+
+        <div class="session-event-action">
+
+          <span>Quota partecipazione</span>
+
+          <strong>
+            € 39
+          </strong>
+
+          <a href="index.html#contatti" class="button">
+            Voglio esserci →
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+    <p class="sessions-calendar-note">
+      Date, menu, prezzi e disponibilità sono indicativi
+      finché il calendario ufficiale non sarà pubblicato.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="final-cta">
+
+  <div class="container">
+
+    <span class="eyebrow eyebrow-light">
+      The BBQ Sunday Society
+    </span>
+
+    <h2>
+      Vieni<br>
+      affamato.
+    </h2>
+
+    <p>
+      Al resto pensiamo noi.
+    </p>
+
+    <a href="#calendario" class="button">
+      Scopri le prossime Sessions →
+    </a>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="container">
+
+    <strong>
+      THE BBQ SUNDAY SOCIETY
+    </strong>
+
+    <p>
+      La grigliata della domenica. Ma fatta bene.
+    </p>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
