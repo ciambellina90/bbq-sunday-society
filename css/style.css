@@ -100,7 +100,19 @@ a {
 .menu a:hover {
   color: var(--ember);
 }
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
 
+.brand-logo {
+    display: block;
+    width: auto;
+    height: 82px;
+    object-fit: contain;
+}
 
 /* ---------- BUTTONS ---------- */
 
