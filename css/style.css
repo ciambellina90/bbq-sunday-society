@@ -251,6 +251,28 @@ a {
   color: var(--ember);
 }
 
+.cover-image {
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+@media (max-width: 800px) {
+
+  .cover-image {
+    height: 320px;
+  }
+
+}
 
 /* ---------- HERO CARD ---------- */
 
@@ -1299,6 +1321,31 @@ a {
   color: var(--ember);
 }
 
+/* FOOTER */
+.footer-image {
+  width: 100%;
+  height: 340px;
+
+  overflow: hidden;
+}
+
+.footer-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+@media (max-width: 800px) {
+
+  .footer-image {
+    height: 260px;
+  }
+
+}
 
 /* FORM */
 
