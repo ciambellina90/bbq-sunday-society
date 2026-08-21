@@ -2268,6 +2268,146 @@ a {
 
   color: var(--muted);
 }
+
+/* ========================================
+   MOBILE MENU
+   ======================================== */
+
+/* Hamburger nascosto su desktop */
+
+.menu-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 8px;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+/* Le tre linee */
+
+.menu-toggle span {
+  display: block;
+
+  width: 100%;
+  height: 3px;
+
+  margin: 5px 0;
+
+  background: var(--charcoal);
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 800px) {
+
+  .site-header .nav {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  /* Mostriamo hamburger */
+
+  .menu-toggle {
+    display: block;
+
+    margin-left: auto;
+  }
+
+
+  /* Nascondiamo menu */
+
+  .site-header .menu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+
+    padding: 25px;
+
+    background: var(--cream);
+
+    border-top: 1px solid rgba(33, 29, 25, 0.12);
+    border-bottom: 3px solid var(--ember);
+  }
+
+
+  /* Menu aperto */
+
+  .site-header .menu.menu-open {
+    display: flex;
+  }
+
+
+  /* Link */
+
+  .site-header .menu a {
+    display: block;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid rgba(33, 29, 25, 0.12);
+
+    font-family: "Barlow Condensed", sans-serif;
+
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+  }
+
+
+  .site-header .menu a:last-child {
+    border-bottom: 0;
+  }
+
+
+  /* Nascondiamo il bottone PARTECIPA
+     perché possiamo inserirlo nel menu */
+
+  .site-header .button-small {
+    display: none;
+  }
+
+}
+
+
+/* ========================================
+   HAMBURGER → X
+   ======================================== */
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 /* ========================================
    WEEKEND TIMELINE
    ======================================== */
