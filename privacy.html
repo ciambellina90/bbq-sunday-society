@@ -25,28 +25,47 @@
 
 <body>
 
-<header class="site-header">
-
+ <header class="site-header">
   <div class="container nav">
 
-    <a href="index.html" class="brand">
+    <a href="/" class="brand" aria-label="The BBQ Sunday Society - Home">
       <img
-        src="images/logo.png"
-        alt="The BBQ Sunday Society"
+        src="/images/logo.png"
+        alt="The BBQ Sunday Society Treviso"
         class="brand-logo"
       >
     </a>
 
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="index.html#corsi">I corsi</a>
+      <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Apri menu"
+      aria-expanded="false"
+      aria-controls="main-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="menu" id="main-menu">
+      <a href="#society">La Society</a>
+      <a href="#corsi">I corsi</a>
       <a href="sunday-sessions.html">Sunday Sessions</a>
-      <a href="index.html#contatti">Contatti</a>
+      <a href="#team">Chi siamo</a>
+      <a href="#faq">FAQ</a>
+
+      <a href="#contatti" class="menu-mobile-cta">
+        Partecipa →
+      </a>
     </nav>
 
+    <a href="#contatti" class="button button-small desktop-cta">
+      Partecipa
+    </a>
   </div>
-
 </header>
+
 
 
 <main>
