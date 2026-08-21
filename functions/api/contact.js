@@ -1,17 +1,13 @@
-export function onRequestGet() {
-  return new Response(
-    JSON.stringify({
-      status: "ok",
-      message: "Contact API is running"
-    }),
-    {
-      status: 200,
-      headers: {
-        "Content-Type": "application/json"
-      }
-    }
-  );
-}export async function onRequestPost(context) {
+function escapeHtml(value = "") {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+export async function onRequestPost(context) {
   try {
     const formData = await context.request.formData();
 
@@ -19,8 +15,23 @@ export function onRequestGet() {
     const email = formData.get("email");
     const corso = formData.get("corso") || "Non specificato";
     const messaggio = formData.get("messaggio") || "Nessun messaggio";
+    const website = formData.get("website");
 
-    // Controllo campi obbligatori
+    // Honeypot: se compilato, molto probabilmente è uno spam bot
+    if (website) {
+      return new Response(
+        JSON.stringify({
+          success: true
+        }),
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      );
+    }
+
     if (!nome || !email) {
       return new Response(
         JSON.stringify({
@@ -36,53 +47,67 @@ export function onRequestGet() {
       );
     }
 
-    // Invio email tramite Resend
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          message: "Inserisci un indirizzo email valido."
+        }),
+        {
+          status: 400,
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      );
+    }
+
+    const safeNome = escapeHtml(nome);
+    const safeEmail = escapeHtml(email);
+    const safeCorso = escapeHtml(corso);
+    const safeMessaggio = escapeHtml(messaggio).replaceAll("\n", "<br>");
+
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
-
       headers: {
         "Authorization": `Bearer ${context.env.RESEND_API_KEY}`,
         "Content-Type": "application/json"
       },
-
       body: JSON.stringify({
         from: "BBQ Sunday Society <website@bbqsundaysociety.it>",
-
         to: [
           "info@bbqsundaysociety.it"
         ],
-
         reply_to: email,
-
-        subject: `Nuova richiesta dal sito - ${nome}`,
-
+        subject: `Nuova richiesta dal sito - ${safeNome}`,
         html: `
           <h2>Nuova richiesta dal sito</h2>
 
           <p>
             <strong>Nome:</strong><br>
-            ${nome}
+            ${safeNome}
           </p>
 
           <p>
             <strong>Email:</strong><br>
-            ${email}
+            ${safeEmail}
           </p>
 
           <p>
             <strong>Corso:</strong><br>
-            ${corso}
+            ${safeCorso}
           </p>
 
           <p>
             <strong>Messaggio:</strong><br>
-            ${messaggio}
+            ${safeMessaggio}
           </p>
         `
       })
     });
 
-    // Resend ha restituito un errore
     if (!response.ok) {
       const error = await response.text();
 
@@ -102,7 +127,6 @@ export function onRequestGet() {
       );
     }
 
-    // Tutto OK
     return new Response(
       JSON.stringify({
         success: true,
