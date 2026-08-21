@@ -1214,7 +1214,194 @@ a {
 
   font-size: 0.85rem;
 }
+/* ========================================
+   CONTACT
+   ======================================== */
 
+.contact {
+  background: var(--cream);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.contact-intro {
+  position: sticky;
+  top: 40px;
+}
+
+.contact-lead {
+  max-width: 500px;
+
+  margin-top: 30px;
+  margin-bottom: 18px;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.contact-intro > p:not(.contact-lead) {
+  max-width: 500px;
+  color: var(--muted);
+}
+
+
+/* EMAIL */
+
+.contact-email {
+  margin-top: 45px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(33, 29, 25, 0.25);
+}
+
+.contact-email span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--muted);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact-email a {
+  color: var(--charcoal);
+
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.contact-email a:hover {
+  color: var(--ember);
+}
+
+
+/* FORM */
+
+.contact-form-wrapper {
+  background: var(--paper);
+
+  padding: 45px;
+
+  border-top: 5px solid var(--ember);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-field label {
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+
+  padding: 15px 0;
+
+  background: transparent;
+
+  border: 0;
+  border-bottom: 2px solid var(--charcoal);
+
+  border-radius: 0;
+
+  color: var(--charcoal);
+
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+
+  outline: none;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-bottom-color: var(--ember);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #9b938a;
+}
+
+
+/* PRIVACY */
+
+.form-check {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+
+  gap: 12px;
+
+  align-items: start;
+}
+
+.form-check input {
+  width: 17px;
+  height: 17px;
+
+  margin-top: 3px;
+
+  accent-color: var(--ember);
+}
+
+.form-check label {
+  color: var(--muted);
+
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+
+/* SUBMIT */
+
+.form-submit {
+  width: 100%;
+
+  cursor: pointer;
+
+  font-family: "Inter", sans-serif;
+}
+
+.form-note {
+  text-align: center;
+
+  color: var(--muted);
+
+  font-size: 0.75rem;
+}
 /* ========================================
    RESPONSIVE EXTRA
    ======================================== */
