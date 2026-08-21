@@ -76,7 +76,8 @@ a {
 .brand-logo {
     display: block;
     width: auto;
-    height: 82px;
+    height: 70px;
+    max-width: 180px;
     object-fit: contain;
 }
 .nav {
