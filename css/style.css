@@ -2797,3 +2797,95 @@ a {
   }
 
 }
+/* ========================================
+   UPDATE POPUP
+   ======================================== */
+
+.update-popup {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(33, 29, 25, 0.88);
+
+  z-index: 99999;
+}
+
+.update-popup-box {
+  width: 100%;
+  max-width: 620px;
+
+  padding: 50px;
+
+  background: var(--cream);
+
+  border-top: 5px solid var(--ember);
+}
+
+.update-label {
+  display: inline-block;
+
+  margin-bottom: 25px;
+
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.update-popup h2 {
+  margin: 0 0 25px;
+
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 900;
+
+  line-height: 0.85;
+  text-transform: uppercase;
+}
+
+.update-popup p {
+  max-width: 500px;
+
+  margin-bottom: 15px;
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.update-small {
+  color: var(--muted);
+}
+
+.update-popup-close {
+  margin-top: 20px;
+
+  cursor: pointer;
+  border: 0;
+}
+
+
+/* Popup nascosto */
+
+.update-popup.is-hidden {
+  display: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .update-popup-box {
+    padding: 35px 25px;
+  }
+
+  .update-popup h2 {
+    font-size: 3.3rem;
+  }
+
+}
