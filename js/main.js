@@ -90,3 +90,32 @@ if (menuToggle && mainMenu) {
   });
 
 }
+/* ========================================
+   UPDATE POPUP
+   ======================================== */
+
+const updatePopup = document.getElementById("updatePopup");
+const closeUpdatePopup = document.getElementById("closeUpdatePopup");
+
+if (updatePopup && closeUpdatePopup) {
+
+  // Controlla se il popup è già stato visto
+  const popupSeen = sessionStorage.getItem("updatePopupSeen");
+
+  if (popupSeen) {
+    updatePopup.classList.add("is-hidden");
+  }
+
+  // Chiude il popup
+  closeUpdatePopup.addEventListener("click", function () {
+
+    updatePopup.classList.add("is-hidden");
+
+    sessionStorage.setItem(
+      "updatePopupSeen",
+      "true"
+    );
+
+  });
+
+}
